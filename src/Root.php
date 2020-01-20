@@ -1,16 +1,10 @@
 <?php
 
-namespace SSM\Core;
+namespace SSM;
 
-class Root {
+class Core {
 
-    public function __construct() {
-
-        $this->setHooks();
-
-    }
-
-    private function setHooks() {
+    public static function setup() {
 
         add_filter('admin_footer_text', array( $this, 'override_admin_footer_text' ));
 
@@ -20,7 +14,7 @@ class Root {
      * Modify the admin footer text
      * See: http://wp-snippets.com/change-footer-text-in-wp-admin/
      */
-    private function override_admin_footer_text() {
+    public function override_admin_footer_text() {
 
         $footer_text = get_option("ssm_core_agency_name") != NULL ? get_option("ssm_core_agency_name") : "Secret Stache Media";
         $footer_link = get_option("ssm_core_agency_url") != NULL ? get_option("ssm_core_agency_url") : "http://secretstache.com";
