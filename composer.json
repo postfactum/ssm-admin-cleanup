@@ -4,9 +4,11 @@
     "license": "MIT",
     "description": "A WordPress plugin which contains a collection of modules to cleanup admin UX",
     "homepage": "https://www.secretstache.com/",
-    "keywords": [
-      "wordpress"
-    ],
+    "autoload": {
+      "psr-4": {
+        "SSM\\Core\\": "src/"
+      }
+    },
     "require": {
       "php": ">=5.4.0"
     }
