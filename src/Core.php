@@ -1,6 +1,6 @@
 <?php
 
-namespace SSM\Core;
+namespace SSM;
 
 class Core {
 
