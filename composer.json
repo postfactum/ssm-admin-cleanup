@@ -6,7 +6,7 @@
     "homepage": "https://www.secretstache.com/",
     "autoload": {
       "psr-4": {
-        "SSM\\": "src/"
+        "SSM\\Core\\": "src/"
       }
     },
     "require": {
