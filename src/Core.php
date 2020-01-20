@@ -1,12 +1,12 @@
 <?php
 
-namespace SSM;
+namespace SSM\Core;
 
 class Core {
 
     public static function setup() {
 
-        add_filter('admin_footer_text', array( $this, 'override_admin_footer_text' ));
+        add_filter('admin_footer_text', Core::override_admin_footer_text );
 
     }
 
